@@ -10,13 +10,14 @@ $Roboto: Roboto;
 .wrapper {
     background-color: #FFFFFF;
     opacity: 1;
-    
+    position: relative;
 } 
 
 
 .wrapper2 {
     display: flow-root;
     zoom: 1;
+    padding: 2em;
 }
 
 .wrapper2::after {
@@ -81,6 +82,7 @@ $Roboto: Roboto;
     font: normal normal medium 34px/43px Roboto;
     letter-spacing: 0px;
     opacity: 1;
+    text-align: center;
 
     .benefits {
         color: #38CCF5;
@@ -88,13 +90,9 @@ $Roboto: Roboto;
     
 }
 
-
-
-.col {
-    
+.repeat-grid {
+    display: none;
 }
-
-
 
 
 /* * ****** Extra LArge device only ***** * */
@@ -329,8 +327,23 @@ $Roboto: Roboto;
         width: 100%;
     }
 
+    .repeat-grid {
+        display: block;
+        position: absolute;
+        top: 2em;
+        right: .3em;
+        width: 60px;
+        height: 60px;
+        fill: #38CCF5;
+    }
+  
+
     .main {
         display: unset;
+    }
+
+    .benefits-p {
+        margin-bottom: 1.5em;
     }
     
 }
@@ -390,8 +403,21 @@ $Roboto: Roboto;
         width: 100%;
     }
 
+    .repeat-grid {
+        display: block;
+        position: absolute;
+        top: 2em;
+        right: .3em;
+        width: 60px;
+        height: 60px;
+    }
+
     .main {
         display: unset;
+    }
+
+    .benefits-p {
+        margin-bottom: 1.5em;
     }
     
 }
@@ -448,8 +474,22 @@ $Roboto: Roboto;
         width: 100%;
     }
 
+
+    .repeat-grid {
+        display: block;
+        position: absolute;
+        top: 2em;
+        right: .3em;
+        width: 60px;
+        height: 60px;
+    }
+
     .main {
         display: unset;
+    }
+
+    .benefits-p {
+        margin-bottom: 1.5em;
     }
 
 }

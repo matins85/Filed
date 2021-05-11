@@ -17,11 +17,11 @@ $Roboto: Roboto;
 .wrapper2 {
     display: flow-root;
     zoom: 1;
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 .wrapper2::after {
-    // position: relative;
-    // overflow: hidden;
     clear: both;
 }
 
@@ -40,7 +40,7 @@ $Roboto: Roboto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 55vh;
+    height: 60vh;
 }
 
 %shared {
@@ -52,6 +52,7 @@ $Roboto: Roboto;
 
 .marked {
     @extend %shared;
+    padding-bottom: 2em;
 }
 
 .quote-marked {
@@ -94,12 +95,14 @@ $Roboto: Roboto;
 .text {
     overflow-wrap: break-word;
     word-wrap: break-word;
+    padding-right: .8em;
 }
 
 .text2 {
     font-style: italic;
     overflow-wrap: break-word;
     word-wrap: break-word;
+    padding-right: .8em;
 }
 
 
@@ -337,6 +340,10 @@ $Roboto: Roboto;
     }
     .col-sm-12 {
         width: 100%;
+    }
+
+    .wrapper {
+        background: transparent linear-gradient(180deg, #38CCF5 0%, #3ECCF5 0%, #42CCF5 16%, #36C1EE 38%, #36C1EE 62%, #36C1EE 81%, #36C1EE 100%) 0% 0% no-repeat padding-box;
     }
 
     .main {

@@ -19,8 +19,6 @@ $Roboto: Roboto;
 }
 
 .wrapper2::after {
-    // position: relative;
-    // overflow: hidden;
     clear: both;
 }
 
@@ -40,6 +38,24 @@ $Roboto: Roboto;
     height: 141px;
 }
 
+// .grid {
+//     position: relative;
+// }
+
+
+.ellipse-8 {
+    position: absolute;
+    background: url('/assets/images/Ellipse\ 8.png');
+    right: 25em;
+    top: 5em;
+    width: 370px;
+    height: 366px;
+}
+
+
+.repeat-grid-mobile, .repeat-grid-mobile2 {
+    display: none;
+}
 
 .main {
     margin-top: 6em;
@@ -84,23 +100,23 @@ $Roboto: Roboto;
     text-transform: capitalize;
 }
 
-.desktop-image-p {
-    width: 75%;
-    height: 50%;
-    position: relative;
+.desktop{
+    position: absolute;
+    background: url('/assets/images/Repeat\ Grid\ 2.png');
+    top: -3em;
+    left: 0;
+    width: 140px;
+    height: 141px;
+    
+}
 
-    .blue-repeat-grid {
-        position: absolute;
-        background-image: url("/assets/images/Repeat\ Grid\ 2.svg");
-        // fill: #38CCF5;
-        left: inherit;
-        top: inherit;
-        background: #38CCF5;
-    }
+.desktop-image-p {
     
     .desktop-image {
-        height: inherit;
-        width: 100%;
+        height: 35vh;
+        width: 30vw;
+        margin-top: 5.5em;
+        margin-left: 2.5em;
     }
 
 }
@@ -137,7 +153,7 @@ mat-card {
 
 
     mat-card-content {
-        margin-top: 4em;
+        margin-top: 3em;
         margin-bottom: 2em;
         margin-left: auto;
         margin-right: auto;
@@ -354,6 +370,10 @@ mat-card {
         width: 100%;
     }
 
+    .main {
+        width: 98%;
+    }
+
 
 }
 
@@ -413,6 +433,10 @@ mat-card {
     }
 
 
+    .main {
+        width: 98%;
+    }
+
 }
 
 
@@ -469,6 +493,72 @@ mat-card {
     }
     .col-sm-12 {
         width: 100%;
+    }
+
+    .logo-p {
+        display: none;
+    }
+
+    .book-demo-text {
+        text-align: center;
+        .free-text {
+            color: #FF6E4E;
+        }
+    }
+
+    .AI-powered-text {
+        text-align: center;
+    }
+
+    .desktop-image-p {
+        display: none;
+    }
+
+    mat-card {
+        width: 98%;
+        left: unset;
+        top: unset;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+        border-radius: 12px;
+        margin-top: -5em;
+
+        mat-card-content {
+            .form {
+                .get-started {
+                    margin-top: 3em;
+                    padding: .8em;
+                }
+            }
+        }
+    }
+
+    .wrapper2 {
+        position: relative;
+    }
+
+    .repeat-grid2 {
+        display: none;
+    }
+
+    .repeat-grid-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .repeat-grid-mobile2 {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .main {
+        width: 98%;
+        margin-top: 2.5em;
     }
     
 }
@@ -528,6 +618,72 @@ mat-card {
         width: 100%;
     }
 
+    .logo-p {
+        display: none;
+    }
+
+    .book-demo-text {
+        text-align: center;
+        .free-text {
+            color: #FF6E4E;
+        }
+    }
+
+    .AI-powered-text {
+        text-align: center;
+    }
+
+    .desktop-image-p {
+        display: none;
+    }
+
+    mat-card {
+        width: 100%;
+        left: unset;
+        padding: 2em;
+        top: unset;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+        border-radius: 12px;
+        margin-top: -5em;
+
+        mat-card-content {
+            .form {
+                .get-started {
+                    margin-top: 3em;
+                    padding: .8em;
+                }
+            }
+        }
+    }
+
+    .wrapper2 {
+        position: relative;
+    }
+
+    .repeat-grid2 {
+        display: none;
+    }
+
+    .repeat-grid-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .repeat-grid-mobile2 {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .main {
+        width: 95%;
+        margin-top: 2.5em;
+    }
     
 }
 
@@ -581,6 +737,74 @@ mat-card {
     }
     .col-xxs-12 {
         width: 100%;
+    }
+
+
+    .logo-p {
+        display: none;
+    }
+
+    .book-demo-text {
+        text-align: center;
+        .free-text {
+            color: #FF6E4E;
+        }
+    }
+
+    .AI-powered-text {
+        text-align: center;
+    }
+
+    .desktop-image-p {
+        display: none;
+    }
+
+    mat-card {
+        width: 100%;
+        left: unset;
+        padding: 2em;
+        top: unset;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+        border-radius: 12px;
+        margin-top: -5em;
+
+        mat-card-content {
+            .form {
+                .get-started {
+                    margin-top: 3em;
+                    padding: .8em;
+                }
+            }
+        }
+    }
+
+    .wrapper2 {
+        position: relative;
+    }
+
+    .repeat-grid2 {
+        display: none;
+    }
+
+    .repeat-grid-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .repeat-grid-mobile2 {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .main {
+        width: 95%;
+        margin-top: 2.5em;
     }
 
 }

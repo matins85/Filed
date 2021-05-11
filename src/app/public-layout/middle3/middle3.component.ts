@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare const $: any;
+
 @Component({
   selector: 'app-middle3',
   templateUrl: './middle3.component.html',
@@ -10,6 +12,12 @@ export class Middle3Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
+    
   }
+
+
+  
+
 
 }
