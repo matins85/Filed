@@ -1,0 +1,55 @@
+.wrapper {
+    background-image: url("/assets/images/Group\ 388.png");
+    width: 100%;
+    height: 531px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-offer-text {
+    font: normal normal normal 20px/30px Roboto;
+    letter-spacing: 0px;
+    color: #38CCF5;
+    opacity: 1;
+    padding: 20px;
+}
+
+
+@media (min-width: 1921px) {
+    .wrapper {
+        background-image: url("/assets/images/Group\ 388@2x.png");
+        width: 100%;
+        height: 1062px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    .our-offer-text {
+        font: normal normal normal 34px/41px Roboto;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .wrapper {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        height: 300px;
+    }
+}
+
+
+@media (max-width: 580px) {
+    .wrapper {
+        height: 200px;
+    }
+}

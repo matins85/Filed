@@ -52,6 +52,13 @@ import { AppPublicSidenavListComponent } from '../public-layout/app-public-siden
 import { FooterComponent } from '../public-layout/footer/footer.component';
 
 
+import { MiddleComponent } from '../public-layout/middle/middle.component';
+import { Middle2Component } from '../public-layout/middle2/middle2.component';
+import { Middle3Component } from '../public-layout/middle3/middle3.component';
+import { Middle4Component } from '../public-layout/middle4/middle4.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -60,6 +67,10 @@ import { FooterComponent } from '../public-layout/footer/footer.component';
     HeaderComponent,
     AppPublicSidenavListComponent,
     FooterComponent,
+    MiddleComponent,
+    Middle2Component,
+    Middle3Component,
+    Middle4Component
 
   ],
   entryComponents: [
@@ -116,6 +127,10 @@ import { FooterComponent } from '../public-layout/footer/footer.component';
     HeaderComponent,
     AppPublicSidenavListComponent,
     FooterComponent,
+    MiddleComponent,
+    Middle2Component,
+    Middle3Component,
+    Middle4Component,
 
 
     MatListModule,
