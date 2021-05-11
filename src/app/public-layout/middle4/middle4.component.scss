@@ -2,11 +2,6 @@
 
 $Roboto: Roboto;
 
-@mixin font($property) {
-  font: normal normal medium $property $Roboto;
-}
-
-
 .wrapper {
     background: transparent linear-gradient(180deg, #38CCF5 0%, #3ECCF5 0%, #42CCF5 16%, #36C1EE 38%, #119FD6 62%, #2A97BF 81%, #108ABF 100%) 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -34,7 +29,7 @@ $Roboto: Roboto;
 
 
 .main {    
-    width: 85%;
+    // width: 85%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -55,6 +50,11 @@ $Roboto: Roboto;
     padding-bottom: 2em;
 }
 
+.quote-text {
+    font: normal normal normal 20px/26px $Roboto;
+    font-weight: 500
+}
+
 .quote-marked {
     @extend %shared;
     margin-top: 3em;
@@ -62,6 +62,7 @@ $Roboto: Roboto;
 }
 
 .sub-text {
+    font: normal normal normal 16px/26px $Roboto;
     padding-right: 2em;
 }
 
@@ -96,6 +97,8 @@ $Roboto: Roboto;
     overflow-wrap: break-word;
     word-wrap: break-word;
     padding-right: .8em;
+    font: normal normal normal 16px/28px $Roboto;
+    font-weight: 500;
 }
 
 .text2 {
@@ -103,6 +106,7 @@ $Roboto: Roboto;
     overflow-wrap: break-word;
     word-wrap: break-word;
     padding-right: .8em;
+    font: italic normal normal 14px/28px $Roboto;
 }
 
 
@@ -164,9 +168,9 @@ $Roboto: Roboto;
         width: 100%;
     }
 
-    /* .col:nth-of-type(4n+1){
-        clear:both;
-    }  */
+    .main {
+        width: 80em;
+    }
 
 }
 
@@ -343,7 +347,7 @@ $Roboto: Roboto;
     }
 
     .wrapper {
-        background: transparent linear-gradient(180deg, #38CCF5 0%, #3ECCF5 0%, #42CCF5 16%, #36C1EE 38%, #36C1EE 62%, #36C1EE 81%, #36C1EE 100%) 0% 0% no-repeat padding-box;
+        background: transparent linear-gradient(180deg, #38CCF5 0%, #3ECCF5 0%, #42CCF5 16%, #42CCF5 38%, #42CCF5 62%, #42CCF5 81%, #42CCF5 100%) 0% 0% no-repeat padding-box;
     }
 
     .main {

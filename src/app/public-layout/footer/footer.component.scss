@@ -8,7 +8,7 @@
 .wrapper {
     padding-top: 1em;
     padding-bottom: 1em;
-    width: 85%;
+    // width: 85%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -23,7 +23,7 @@
 }
 
 .copyright {
-    font-size: 14px;
+    font: normal normal normal 14px/20px Roboto;
 }
 
 .menu-p {
@@ -34,8 +34,25 @@
 .menu-p button {
     text-transform: uppercase;
     margin-left: 5px;
-    margin-right: 5px;
-    font-size: 13px;
+    margin-right: 5px;   
+    padding: .4em; 
+    font: normal normal normal 14px/20px Roboto;
+}
+
+
+@media (min-width: 1200px) { 
+
+    .wrapper {
+        width: 80em;
+    }
+
+}
+
+
+@media (max-width: 1199px) {
+    .wrapper {
+        width: 95%;
+    }
 }
 
 @media (max-width: 1024px) {

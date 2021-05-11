@@ -2,10 +2,6 @@
 
 $Roboto: Roboto;
 
-@mixin font($property) {
-  font: normal normal medium $property $Roboto;
-}
-
 
 .wrapper {
     background-color: #FFFFFF;
@@ -35,7 +31,7 @@ $Roboto: Roboto;
 
 
 .main {    
-    width: 85%;
+    // width: 85%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -44,12 +40,9 @@ $Roboto: Roboto;
     height: 50vh;
 }
 
-
-.col  {
-    // padding-left: 1em;
-    // padding-right: 1em;
-    // margin-top: 5em;
-    // margin-bottom: 5em;
+.text {
+    font: normal normal normal 14px/20px Roboto;
+    font-weight: 500;
 }
 
 
@@ -79,7 +72,8 @@ $Roboto: Roboto;
 }
 
 .benefits-p {
-    font: normal normal medium 34px/43px Roboto;
+    font: normal normal normal 25px/33px Roboto;
+    font-weight: 500;
     letter-spacing: 0px;
     opacity: 1;
     text-align: center;
@@ -149,9 +143,9 @@ $Roboto: Roboto;
         width: 100%;
     }
 
-    /* .col:nth-of-type(4n+1){
-        clear:both;
-    }  */
+    .main {
+        width: 80em;
+    }
 
 }
 

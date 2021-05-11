@@ -2,10 +2,6 @@
 
 $Roboto: Roboto;
 
-@mixin font($property) {
-  font: normal normal medium $property $Roboto;
-}
-
 
 .wrapper {
     background-color: #FFFFFF;
@@ -29,27 +25,36 @@ $Roboto: Roboto;
 }
 
 
+.grid {
+    position: relative;
+}
+
 .repeat-grid2 {
     position: absolute;
     background: url('/assets/images/Repeat\ Grid\ 2.png');
-    right: 8em;
-    top: 6em;
+    right: 0;
+    top: 0;
     width: 140px;
     height: 141px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-// .grid {
-//     position: relative;
-// }
 
 
 .ellipse-8 {
     position: absolute;
     background: url('/assets/images/Ellipse\ 8.png');
-    right: 25em;
-    top: 5em;
-    width: 370px;
-    height: 366px;
+    right: 23%;
+    top: -2em;
+    // width: 370px;
+    // height: 366px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
 }
 
 
@@ -59,7 +64,7 @@ $Roboto: Roboto;
 
 .main {
     margin-top: 6em;
-    width: 85%;
+    // width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -78,7 +83,9 @@ $Roboto: Roboto;
 
 
 .book-demo-text {
-    @include font(44px/65px); 
+    font: normal normal normal 34px/55px $Roboto; 
+    font-weight: 500;
+    line-height: 40px;
     text-align: left;
     letter-spacing: 0px;
     opacity: 1;
@@ -91,13 +98,19 @@ $Roboto: Roboto;
 
 
 .AI-powered-text {
-    @include font(28px/34px); 
+    font: normal normal normal 20px/25px $Roboto;
+    font-weight: 500; 
+    line-height: 30px;
     margin-top: 20px;
     margin-bottom: 80px;
     text-align: left;
     letter-spacing: 0.56px;
     color: #000000;
     text-transform: capitalize;
+}
+
+.desktop-p {
+    position: relative;
 }
 
 .desktop{
@@ -110,11 +123,46 @@ $Roboto: Roboto;
     
 }
 
+
+%img-shared {
+    position: absolute;
+    background: url('/assets/images/Ellipse\ 11.png');
+    background-repeat: no-repeat;
+    background-position: fit;
+    background-size: contain;
+}
+
+.round-img {
+    @extend %img-shared;
+    top: -8em;
+    right: 0;
+    width: 60px;
+    height: 60px;
+}
+
+.round-img2 {
+    @extend %img-shared;
+    top: -3em;
+    right: 4em;
+    width: 30px;
+    height: 30px;
+}
+
+.round-img3 {
+    @extend %img-shared;
+    top: 0.2em;
+    right: 6.5em;
+    width: 20px;
+    height: 20px;
+}
+
+
+
 .desktop-image-p {
     
     .desktop-image {
-        height: 35vh;
-        width: 30vw;
+        width: 350px;
+        height: 200px;        
         margin-top: 5.5em;
         margin-left: 2.5em;
     }
@@ -147,7 +195,7 @@ mat-card {
     opacity: 1;
     padding: 3em;
     width: 80%;
-    left: 9.5%;
+    left: 11.5%;
     top: 2.6em;
     margin-bottom: 5em;
 
@@ -160,7 +208,7 @@ mat-card {
 
 
         .let-start {
-            @include font(34px/41px); 
+            font: normal normal normal 34px/41px $Roboto; 
             text-align: center;
             letter-spacing: 0px;
             color: #000000;
@@ -169,6 +217,7 @@ mat-card {
         }
         
         .fill-text {
+            font-weight: 500;
             text-align: center;
             margin-top: 20px;
         }
@@ -189,12 +238,17 @@ mat-card {
 
 
             .monthly {
+                font-weight: 500;
                 margin-top: 20px;
                 margin-bottom: 10px
             }
 
+            .ads-text {
+                font-weight: 500;
+            }
+
             .get-started {
-                @include font(20px/24px);
+                font: normal normal normal 15px/20px $Roboto; 
                 background: transparent linear-gradient(180deg, #FF6E4E 0%, #FF6E4E 100%);
                 box-shadow: 0px 4px 8px #00000029;
                 opacity: 1;
@@ -211,7 +265,7 @@ mat-card {
 
 
         }
-        
+    
         
         .form-select {
             // background: #FFFFFF;
@@ -220,7 +274,7 @@ mat-card {
             opacity: 1;
         
             .option1 {
-                @include font(16px/19px); 
+                font: normal normal normal 16px/19px $Roboto; 
                 letter-spacing: 0px;
                 color: #000000;
                 opacity: 1;
@@ -240,17 +294,6 @@ mat-card {
 .col {
     padding: 1em;
 }
-
-
-// .col:after {
-//     content: "";
-//     display: table;
-//     clear: both;
-// }
-
-
-
-
 
 
 
@@ -312,6 +355,12 @@ mat-card {
     /* .col:nth-of-type(4n+1){
         clear:both;
     }  */
+
+
+
+    .main {
+        width: 80em;
+    }
 
 }
 
@@ -375,6 +424,7 @@ mat-card {
     }
 
 
+
 }
 
 
@@ -430,6 +480,10 @@ mat-card {
     }
     .col-md-12 {
         width: 100%;
+    }
+
+    .round-img, .round-img2, .round-img3 {
+        display: none;
     }
 
 
@@ -495,6 +549,10 @@ mat-card {
         width: 100%;
     }
 
+    .round-img, .round-img2, .round-img3 {
+        display: none;
+    }
+
     .logo-p {
         display: none;
     }
@@ -510,7 +568,7 @@ mat-card {
         text-align: center;
     }
 
-    .desktop-image-p {
+    .desktop-p, .ellipse-8 {
         display: none;
     }
 
@@ -633,7 +691,7 @@ mat-card {
         text-align: center;
     }
 
-    .desktop-image-p {
+    .desktop-p, .ellipse-8 {
         display: none;
     }
 
@@ -683,6 +741,10 @@ mat-card {
     .main {
         width: 95%;
         margin-top: 2.5em;
+    }
+
+    .round-img, .round-img2, .round-img3 {
+        display: none;
     }
     
 }
@@ -755,7 +817,7 @@ mat-card {
         text-align: center;
     }
 
-    .desktop-image-p {
+    .desktop-p, .ellipse-8 {
         display: none;
     }
 
@@ -805,6 +867,10 @@ mat-card {
     .main {
         width: 95%;
         margin-top: 2.5em;
+    }
+
+    .round-img, .round-img2, .round-img3 {
+        display: none;
     }
 
 }
