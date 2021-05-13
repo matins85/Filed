@@ -6,6 +6,7 @@ $Roboto: Roboto;
 .wrapper {
     background-color: #FFFFFF;
     opacity: 1;
+    position: relative;
 } 
 
 
@@ -159,12 +160,14 @@ $Roboto: Roboto;
 
 
 .desktop-image-p {
-    
     .desktop-image {
-        width: 350px;
-        height: 200px;        
+        // width: 350px;
+        // height: 200px;  
+        width: 35vw;
+        height: 17em;        
         margin-top: 5.5em;
-        margin-left: 2.5em;
+        margin-left: 2em;
+        padding-bottom: 4em;
     }
 
 }
@@ -225,10 +228,12 @@ mat-card {
         .form {
             margin-top: 20px;
 
+            mat-error {
+                font-size: 12px;
+            }
+
             .form-check-p {
-                display: center;
-                justify-content: space-around;
-                align-items: center;
+                text-align: left !important;
             }
 
             .form-check-input:checked {
@@ -243,7 +248,7 @@ mat-card {
                 margin-bottom: 10px
             }
 
-            .ads-text {
+            .ads-text {position: relative;
                 font-weight: 500;
             }
 
@@ -283,9 +288,9 @@ mat-card {
         
         
         
-        .form-select:focus {
-            box-shadow: none;
-        }
+        // .form-select:focus {
+        //     box-shadow: none;
+        // }
 
     }
 
@@ -295,6 +300,16 @@ mat-card {
     padding: 1em;
 }
 
+
+
+
+@media (min-width: 1300px) {
+    .desktop-image-p {
+        .desktop-image {
+            width: 300%; 
+        }
+    }
+}
 
 
 
@@ -355,7 +370,6 @@ mat-card {
     /* .col:nth-of-type(4n+1){
         clear:both;
     }  */
-
 
 
     .main {
@@ -482,6 +496,12 @@ mat-card {
         width: 100%;
     }
 
+    .desktop-image-p {
+        .desktop-image {
+            height: 15em; 
+        }
+    }
+
     .round-img, .round-img2, .round-img3 {
         display: none;
     }
@@ -583,10 +603,21 @@ mat-card {
         margin-top: -5em;
 
         mat-card-content {
-            .form {
+
+            .let-start {
+                display: none;
+            }
+
+
+            .form {    
+
                 .get-started {
                     margin-top: 3em;
                     padding: .8em;
+                }
+
+                .fill-text {
+                    color: #38CCF5;
                 }
             }
         }
@@ -709,10 +740,22 @@ mat-card {
         margin-top: -5em;
 
         mat-card-content {
+
+            .let-start {
+                display: none;
+            }
+
+            .fill-text {
+                color: #38CCF5;
+            }
+
             .form {
                 .get-started {
                     margin-top: 3em;
                     padding: .8em;
+                }
+                .fill-text {
+                    color: #38CCF5;
                 }
             }
         }
@@ -837,11 +880,21 @@ mat-card {
         margin-top: -5em;
 
         mat-card-content {
+
+            .let-start {
+                display: none;
+            }
+
+            .fill-text {
+                color: #38CCF5;
+            }
+
             .form {
                 .get-started {
                     margin-top: 3em;
                     padding: .8em;
                 }
+                
             }
         }
     }

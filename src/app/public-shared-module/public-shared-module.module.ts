@@ -56,6 +56,7 @@ import { MiddleComponent } from '../public-layout/middle/middle.component';
 import { Middle2Component } from '../public-layout/middle2/middle2.component';
 import { Middle3Component } from '../public-layout/middle3/middle3.component';
 import { Middle4Component } from '../public-layout/middle4/middle4.component';
+import { MiddleForm2Component } from '../public-layout/middle-form2/middle-form2.component';
 
 
 
@@ -70,7 +71,8 @@ import { Middle4Component } from '../public-layout/middle4/middle4.component';
     MiddleComponent,
     Middle2Component,
     Middle3Component,
-    Middle4Component
+    Middle4Component,
+    MiddleForm2Component
 
   ],
   entryComponents: [
@@ -131,6 +133,7 @@ import { Middle4Component } from '../public-layout/middle4/middle4.component';
     Middle2Component,
     Middle3Component,
     Middle4Component,
+    MiddleForm2Component,
 
 
     MatListModule,

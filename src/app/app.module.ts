@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders, Optional, SkipSelf } from '@angular/core';
 // import { CodeInputModule } from 'angular-code-input';
 // import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import {ClipboardModule} from '@angular/cdk/clipboard';
@@ -51,15 +51,25 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 import { ProcessHttpMsgService } from './services/process-http-msg.service';
+import { HttpClientModule } from '@angular/common/http';
+import { PaymentService } from './services/payment.service';
 
 
 import { DefaultModuleModule } from './default-module/default-module.module';
 import { DashboardModuleModule } from './dashboard-module/dashboard-module.module';
 
 
+
+// state
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+
+import { reducers } from './reducers/index';
+
+
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,     
   ],
   imports: [
     BrowserModule,
@@ -104,6 +114,7 @@ import { DashboardModuleModule } from './dashboard-module/dashboard-module.modul
     MatTableModule,
     MatTabsModule,
     MatTooltipModule,
+    HttpClientModule,
     // CodeInputModule,
     FormsModule,
     ReactiveFormsModule,
@@ -111,12 +122,32 @@ import { DashboardModuleModule } from './dashboard-module/dashboard-module.modul
     ClipboardModule,
     // NgxPaginationModule,
     // Ng2SearchPipeModule
+
+    StoreModule.forRoot(reducers, {}),
+    StoreDevtoolsModule.instrument()
+
   ],
   providers: [
     ProcessHttpMsgService,
+    PaymentService,
     MatDatepickerModule,
     MatNativeDateModule,
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(@Optional() @SkipSelf() parentModule: AppModule) {
+    if (parentModule) {
+      throw new Error('StateModule is already loaded. Import it in the AppModule only');
+    }
+  }
+
+  public static forRoot(): ModuleWithProviders<AppModule> {
+    return {
+      ngModule: AppModule,
+      providers: []
+    };
+  }
+
+}

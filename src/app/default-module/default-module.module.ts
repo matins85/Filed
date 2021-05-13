@@ -9,12 +9,14 @@ import { PublicSharedModuleModule } from '../public-shared-module/public-shared-
 
 
 import { HomeComponent } from '../public-layout/home/home.component';
+import { Home2Component } from '../public-layout/home2/home2.component';
 
 
 @NgModule({
   declarations: [
     DefaultLayoutComponent,
     HomeComponent,
+    Home2Component,
 
 
   ],

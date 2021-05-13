@@ -5,11 +5,14 @@ import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.co
 import { DefaultLayoutComponent } from './default-layout/default-layout.component'
 import { HomeComponent } from './public-layout/home/home.component'
 import { PrivateHomeComponent } from './private-layout/private-home/private-home.component'
+import { Home2Component } from './public-layout/home2/home2.component';
+
 
 const routes: Routes = [{
   path: '', component: DefaultLayoutComponent, children: [
     {path: '', component: HomeComponent},
-    {path: 'home', component: HomeComponent},
+    {path: 'First', component: HomeComponent},
+    {path: 'Second', component: Home2Component},
     
     // {path: '**', component: NotFoundComponent},
     // {path: '**', redirectTo: ''}

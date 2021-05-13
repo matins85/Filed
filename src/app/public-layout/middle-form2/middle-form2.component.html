@@ -1,0 +1,83 @@
+
+<div class="back-p">
+    <button routerLink="/First" mat-raised-button class="back">back</button>
+</div>
+
+<div class="let-start">
+    we'll be in touch to get your trial set up.
+</div>
+
+<div class="fill-text">
+    Fill out form
+</div>
+
+<div class="fill-details">
+    Fill out form
+</div>
+
+
+<form class="form" novalidate [formGroup]="feedbackForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+
+
+          <div class="mb-3 form-left col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <input matInput formControlName="firstname" type="text" class="form-control border" id="firstname" placeholder="First Name">
+            <mat-error *ngIf="formErrors.firstname">{{formErrors.firstname}}</mat-error>
+          </div>
+    
+          <div class="mb-3 form-right col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <input matInput formControlName="lastname" type="text" class="form-control border" id="lastname" placeholder="Last Name">
+            <mat-error *ngIf="formErrors.lastname">{{formErrors.lastname}}</mat-error>
+          </div>
+
+
+          <div class="mb-3 company">
+            <input matInput formControlName="company_name" type="text" class="form-control border" id="company_name" placeholder="Company name">
+            <mat-error *ngIf="formErrors.company_name">{{formErrors.company_name}}</mat-error>
+          </div>
+
+
+            <div class="mb-3">
+            <input matInput formControlName="email" type="email" class="form-control border" id="email" placeholder="Work Email">
+            <mat-error *ngIf="formErrors.email">{{formErrors.email}}</mat-error>
+            </div>
+      
+            <div class="mb-3">
+                <select matInput formControlName="budget" class="form-select" required>
+                    <option value="" selected class="option1">Monthly Advertising Budget</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="1500">1500</option>
+                    <option value="2000">2000</option>
+                </select>
+                <mat-error *ngIf="formErrors.budget">
+                    {{formErrors.budget}}
+                </mat-error>
+            </div>
+
+  
+
+    <div class="input-group mb-3">
+        <select matInput formControlName="country" class="form-select select2 col-xl-7 col-lg-7 col-md-7 col-sm-7 col-xs-12 col-xxs-12" aria-label="Default select example" required>
+            <option value="Romania(Roman)" selected class="option1">Romania(Roman)</option>
+        </select>
+        
+        <span class="input-group-text">+40</span>
+        <div class="input-group- col-xl-5 col-lg-5 col-md-5 col-sm-5 col-xs-12 col-xxs-12">   
+            <input matInput formControlName="phoneNo" type="number" class="form-control phone" id="budget">
+            <mat-error *ngIf="formErrors.budget">{{formErrors.phoneNo}}</mat-error>
+        </div>
+
+        <mat-error *ngIf="formErrors.country">{{formErrors.country}}</mat-error>
+
+    </div>
+
+    <button [disabled]="fform.form.invalid || disabled === false" type="submit" class="get-started mt-3" mat-button>
+        <div *ngIf="isSaving" class="spinner-border text-light" role="status" style="height: 1.4em; width: 1.4em;">
+            <span class="sr-only">Loading...</span>
+        </div>
+
+      <div *ngIf="!isSaving">get free trial</div>
+    </button>
+
+
+ </form>
