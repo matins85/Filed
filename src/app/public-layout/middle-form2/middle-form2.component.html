@@ -1,19 +1,19 @@
 
-<div class="back-p">
-    <button routerLink="/First" mat-raised-button class="back">back</button>
-</div>
+    <div class="back-p">
+        <button routerLink="/First" mat-raised-button class="back">back</button>
+    </div>
 
-<div class="let-start">
-    we'll be in touch to get your trial set up.
-</div>
+    <div class="let-start">
+        we'll be in touch to get your trial set up.
+    </div>
 
-<div class="fill-text">
-    Fill out form
-</div>
+    <div class="fill-text">
+        Fill out form
+    </div>
 
-<div class="fill-details">
-    Fill out form
-</div>
+    <div class="fill-details">
+        Fill out form
+    </div>
 
 
 <form class="form" novalidate [formGroup]="feedbackForm" #fform="ngForm" (ngSubmit)="onSubmit()">
@@ -70,6 +70,7 @@
         <mat-error *ngIf="formErrors.country">{{formErrors.country}}</mat-error>
 
     </div>
+    
 
     <button [disabled]="fform.form.invalid || disabled === false" type="submit" class="get-started mt-3" mat-button>
         <div *ngIf="isSaving" class="spinner-border text-light" role="status" style="height: 1.4em; width: 1.4em;">

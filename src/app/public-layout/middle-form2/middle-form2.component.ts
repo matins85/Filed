@@ -86,8 +86,9 @@ export class MiddleForm2Component implements OnInit {
 
         this.stateUserData = store.select(selectAllUser);
 
-  
   }
+
+
 
 // form1
   createForm() {
@@ -107,6 +108,7 @@ export class MiddleForm2Component implements OnInit {
 
     this.onValueChanged1(); // (re)set validation messages now
   }
+
 
 
   onValueChanged1(data?: any) {
@@ -143,6 +145,7 @@ export class MiddleForm2Component implements OnInit {
         "lastname": this.feedback?.lastname
     }
 
+
     this.payment.POST('https://reqres.in/api/posts').subscribe(
       datas=> {
         this.isSaving = false;
@@ -163,6 +166,8 @@ export class MiddleForm2Component implements OnInit {
     )
 
   }
+
+  
 
 
   ngOnInit(): void {

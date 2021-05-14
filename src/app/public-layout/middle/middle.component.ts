@@ -105,6 +105,8 @@ export class MiddleComponent implements OnInit {
     });
   }
 
+  
+
   home() {
     this.store.dispatch(new RemoveUser([{id: 1, data: []}]));
     this.back.setMessage("first")
@@ -125,9 +127,9 @@ export class MiddleComponent implements OnInit {
       }
       });
 
-    
-
   }
+
+
 
 
 }
